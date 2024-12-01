@@ -7,6 +7,7 @@ import { SessionService } from '../shared/services/session.service';
 @Component({
     selector: 'app-topbar',
     templateUrl: './app.topbar.component.html',
+    styleUrl: './app.topbar.component.scss'
 })
 export class AppTopBarComponent {
     items!: MenuItem[];
@@ -58,4 +59,6 @@ export class AppTopBarComponent {
             reject: () => {},
         });
     }
+
+    onSearch() {}
 }

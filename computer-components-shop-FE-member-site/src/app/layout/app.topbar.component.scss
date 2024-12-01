@@ -1,0 +1,164 @@
+/* Topbar Container */
+.layout-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Khoảng cách giữa các phần */
+}
+
+/* Logo Section */
+
+/* Search Section */
+.layout-topbar-search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Tăng kích thước để search chiếm nhiều không gian */
+}
+
+.layout-topbar-search input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px 0 0 25px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.layout-topbar-search input:focus {
+  border-color: #6366F1;
+}
+
+.search-button {
+  padding: 10px;
+  border: none;
+  background-color: #6366F1;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #6366F1;
+}
+
+.search-button i {
+  font-size: 16px;
+}
+
+/* Info Section */
+.layout-info-section {
+  display: flex;
+  gap: 40px; /* Khoảng cách giữa các mục */
+  align-items: center; /* Căn giữa mục theo chiều dọc */
+  justify-content: center; /* Căn giữa toàn bộ Info Section */
+  padding: 20px 0; /* Tạo không gian trên và dưới */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative; /* Để sử dụng pseudo-element */
+}
+
+.info-item:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 40px; /* Chiều cao của đường gạch */
+  background-color: #ccc; /* Màu của đường gạch */
+  position: absolute;
+  right: -20px; /* Căn gạch thẳng cách bên phải */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.info-number {
+  font-size: 36px; /* Tăng kích thước số */
+  color: #6366F1;
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 16px; /* Tăng kích thước mô tả */
+  color: #333;
+  text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+  line-height: 1.4;
+}
+
+/* Contact Section */
+.layout-contact-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.contact-item {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative; /* Để sử dụng pseudo-element */
+}
+
+.contact-item:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 30px; /* Chiều cao của đường gạch */
+  background-color: #ccc; /* Màu của đường gạch */
+  position: absolute;
+  right: -10px; /* Căn gạch thẳng cách bên phải */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Menu Section */
+.layout-topbar-menu {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.layout-topbar-menu button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.layout-topbar-menu button:hover {
+  color: #6366F1;
+}
+
+.layout-topbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.layout-topbar-logo {
+  margin-right: auto; /* Đẩy logo sang trái */
+}
+
+.layout-topbar-search {
+  margin-left: auto; /* Đẩy search sang phải của logo */
+}
+
+.layout-info-section {
+  margin: 0 auto; /* Đẩy info vào giữa */
+}
+
+.layout-topbar-menu {
+  margin-left: auto; /* Đẩy menu sang phải */
+}

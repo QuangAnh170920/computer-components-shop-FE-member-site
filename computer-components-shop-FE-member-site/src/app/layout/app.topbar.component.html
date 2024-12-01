@@ -1,34 +1,61 @@
 <div class="layout-topbar">
-    <a class="layout-topbar-logo" routerLink="">
-        <img  src="assets/layout/images/QAlogo.png" alt="logo">
-    </a>
+  <button
+    #menubutton
+    class="p-link layout-menu-button layout-topbar-button"
+    (click)="layoutService.onMenuToggle()"
+  >
+    <i class="pi pi-bars"></i>
+  </button>
+  <!-- Logo -->
+  <a class="layout-topbar-logo" routerLink="">
+    <img src="assets/layout/images/QAlogo.png" alt="logo" />
+  </a>
 
-    <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
-        <i class="pi pi-bars"></i>
+  <!-- Search Section -->
+  <div class="layout-topbar-search">
+    <input
+      type="text"
+      class="p-inputtext"
+      placeholder="Bạn muốn tìm gì, gõ vào đây..."
+    />
+    <button class="search-button">
+      <i class="pi pi-search"></i>
     </button>
+  </div>
 
-    <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
-        <i class="pi pi-ellipsis-v"></i>
+  <!-- Info Section -->
+  <div class="layout-info-section" style="cursor: pointer;">
+    <div class="info-item">
+      <span class="info-number">07</span>
+      <span class="info-text">NGÀY MIỄN PHÍ<br />đổi trả</span>
+    </div>
+    <div class="info-item">
+      <span class="info-number">06</span>
+      <span class="info-text">THÁNG 1 ĐỔI 1<br />hàng lỗi</span>
+    </div>
+    <div class="info-item">
+      <span class="info-number">12</span>
+      <span class="info-text">THÁNG BẢO HÀNH<br />sản phẩm</span>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="layout-contact-section">
+    <div class="contact-item">
+      <span class="contact-title" style="cursor: pointer;">Trung tâm hỗ trợ</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-title" style="cursor: pointer;">Liên hệ</span>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="layout-topbar-menu">
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-user"></i>
     </button>
-
-
-    <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
-        <!-- <button class="p-link layout-topbar-button">
-            <i class="pi pi-calendar"></i>
-            <span>Calendar</span>
-        </button> -->
-    <div class="flex " style="display: flex; justify-content: center;">
-            <button  (click)="menu.toggle($event)"  class="p-link layout-topbar-button">
-                <i class="pi pi-user"></i>
-                <span>Profile</span>
-            </button>
-    </div>
-        <!-- <button class="p-link layout-topbar-button" >
-            <i class="pi pi-cog"></i>
-            <span>Settings</span>
-        </button> -->
-    </div>
-    <p-menu #menu [model]="items" [popup]="true"></p-menu>
-
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-shopping-cart"></i>
+    </button>
+  </div>
 </div>
-<!-- {{ layoutService.state | json }} -->
