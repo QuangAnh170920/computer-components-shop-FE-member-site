@@ -1,0 +1,196 @@
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Chỉnh sửa style cho phần danh mục */
+.category-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Tạo nền nhẹ nhàng */
+  border-radius: 12px; /* Cải thiện viền */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ cho container */
+  margin-bottom: 40px;
+}
+
+/* Style cho mục danh mục */
+.category-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ cho mục */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+
+/* Hiệu ứng hover cho mục danh mục */
+.category-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng khi hover */
+  cursor: pointer; /* Thêm hiệu ứng con trỏ chuột */
+}
+
+/* Style cho ảnh danh mục */
+.category-image {
+  width: 100%;
+  height: 180px; /* Tăng chiều cao để tạo độ nổi bật */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Viền giữa ảnh và tên */
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho ảnh */
+.category-item:hover .category-image {
+  transform: scale(1.05); /* Phóng to ảnh khi hover */
+}
+
+/* Style cho tên danh mục */
+.category-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Thay đổi màu tên khi hover */
+.category-item:hover .category-name {
+  color: #007bff;
+}
+
+/* Style cho các section sản phẩm */
+.product-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Nền sáng cho các section */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho các section */
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Tạo độ rộng giữa các chữ */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Chỉnh sửa kiểu dáng cho product card */
+.p-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng cho card */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover cho card */
+  background-color: white;
+}
+
+/* Hiệu ứng hover cho product card */
+.p-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Style cho ảnh sản phẩm */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Hiệu ứng phóng to ảnh */
+}
+
+/* Hiệu ứng hover cho ảnh */
+.p-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+/* Style cho footer của card */
+.p-footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style cho nút shopping-cart */
+.layout-topbar-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 18px;
+}
+
+.layout-topbar-button:hover {
+  background-color: #0056b3; /* Màu thay đổi khi hover */
+  transform: scale(1.1); /* Phóng to nút khi hover */
+}
+
+/* Style cho icon shopping cart */
+.pi-shopping-cart {
+  font-size: 24px;
+}
+
+/* Hiệu ứng hover cho icon shopping cart */
+.layout-topbar-button:hover .pi-shopping-cart {
+  transform: rotate(15deg); /* Thêm hiệu ứng xoay nhẹ cho icon khi hover */
+}
+
+.site-footer {
+  background-color: #f8f8f8; /* Màu nền footer */
+  padding: 20px 40px; /* Khoảng cách trong */
+  text-align: center;
+  border-top: 2px solid #6366f1; /* Đường gạch trên footer */
+}
+
+.footer-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.footer-links li a:hover {
+  color: #333;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
+}

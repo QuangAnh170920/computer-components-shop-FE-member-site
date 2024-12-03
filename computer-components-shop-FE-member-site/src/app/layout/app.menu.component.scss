@@ -1,0 +1,80 @@
+/* Style cho menu item cha */
+.menu-item {
+    cursor: pointer;
+    padding: 12px 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #444;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #eee;
+    border-radius: 5px;
+}
+
+/* Hiệu ứng hover cho menu item */
+.menu-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hiệu ứng icon khi mở và đóng menu con */
+.menu-item i {
+    transition: transform 0.3s ease;
+}
+
+/* Menu con */
+.submenu {
+    padding-left: 20px;
+    list-style: none;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Style cho item trong menu con */
+.submenu-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0;
+    font-size: 15px;
+    font-weight: normal;
+    transition: background-color 0.2s ease;
+}
+
+.submenu-item a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Chỉ hiển thị submenu khi expanded */
+.submenu.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Animation cho submenu khi mở ra */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Điều chỉnh font và màu sắc cho các icon */
+.submenu-item i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Menu khi được mở rộng */
+.menu-item.expanded i {
+    transform: rotate(90deg);
+}

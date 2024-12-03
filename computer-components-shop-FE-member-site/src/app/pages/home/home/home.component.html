@@ -1,1 +1,94 @@
-<p>home works!</p>
+<p-carousel
+  [value]="banners"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="3000"
+>
+  <ng-template pTemplate="item" let-banner>
+    <img [src]="banner.image" alt="Khuyến mãi" class="banner-image" />
+  </ng-template>
+</p-carousel>
+
+<div class="category-section">
+  <div *ngFor="let category of categories" class="category-item">
+    <img
+      [src]="category.image"
+      alt="{{ category.name }}"
+      class="category-image"
+    />
+    <div class="category-name">{{ category.name }}</div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h2 class="section-title">Top Sản Phẩm Nổi Bật</h2>
+  <div class="product-grid">
+    <p-card
+      *ngFor="let product of topProducts | slice : 0 : 20"
+      header="{{ product.name }}"
+      subheader="{{ product.price }}"
+    >
+      <img
+        [src]="product.image"
+        alt="{{ product.name }}"
+        class="product-image"
+      />
+      <p-footer>
+        <button class="p-link layout-topbar-button">
+          <i class="pi pi-shopping-cart"></i>
+        </button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
+
+<div class="product-section">
+  <h2 class="section-title">Sản Phẩm Có Thể Bạn Ưa Thích</h2>
+  <div class="product-grid">
+    <p-card
+      *ngFor="let product of recommendedProducts | slice : 0 : 20"
+      header="{{ product.name }}"
+      subheader="{{ product.price }}"
+    >
+      <img
+        [src]="product.image"
+        alt="{{ product.name }}"
+        class="product-image"
+      />
+      <p-footer>
+        <button class="p-link layout-topbar-button">
+          <i class="pi pi-shopping-cart"></i>
+        </button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <h2>Đồ Gia Dụng Thông Minh</h2>
+    <p>
+      Chào mừng đến với Gia Dụng QAP - Điểm đến lý tưởng cho mọi gia đình! Gia
+      Dụng QAP là trang web chuyên cung cấp các sản phẩm đồ gia dụng chất lượng
+      cao, tiện ích cho mọi gia đình. Chúng tôi cam kết mang đến những sản phẩm
+      hiện đại, thiết kế thông minh giúp tiết kiệm thời gian và công sức cho
+      người sử dụng. Tại Gia Dụng QAP, bạn sẽ tìm thấy đa dạng các danh mục sản
+      phẩm như bếp, dụng cụ vệ sinh, thiết bị điện tử, và nhiều món đồ gia dụng
+      thông minh khác, tất cả đều được chọn lọc kỹ càng từ các thương hiệu uy
+      tín. Chúng tôi luôn mong muốn mang đến cho bạn những giải pháp tiện nghi
+      cho cuộc sống hàng ngày. Với giao diện dễ sử dụng, dịch vụ chăm sóc khách
+      hàng tận tình, và các chương trình khuyến mãi hấp dẫn, Gia Dụng QAP sẽ là
+      đối tác đáng tin cậy trong việc trang bị cho ngôi nhà của bạn những sản
+      phẩm chất lượng nhất. Hãy đến và khám phá các sản phẩm giúp cuộc sống gia
+      đình bạn thêm phần tiện nghi và hiện đại.
+    </p>
+    <ul class="footer-links">
+      <li><a href="#">Về chúng tôi</a></li>
+      <li><a href="#">Liên hệ</a></li>
+      <li><a href="#">Chính sách bảo mật</a></li>
+      <li><a href="#">Điều khoản sử dụng</a></li>
+    </ul>
+    <p class="footer-note">&copy; 2024 Gia Dụng QAP. All rights reserved.</p>
+  </div>
+</footer>

@@ -6,7 +6,7 @@
   padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  gap: 20px; /* Khoảng cách giữa các phần */
+  gap: 20px;
 }
 
 /* Logo Section */
@@ -15,7 +15,7 @@
 .layout-topbar-search {
   display: flex;
   align-items: center;
-  flex-grow: 1; /* Tăng kích thước để search chiếm nhiều không gian */
+  flex-grow: 1;
 }
 
 .layout-topbar-search input {
@@ -53,40 +53,40 @@
 /* Info Section */
 .layout-info-section {
   display: flex;
-  gap: 40px; /* Khoảng cách giữa các mục */
-  align-items: center; /* Căn giữa mục theo chiều dọc */
-  justify-content: center; /* Căn giữa toàn bộ Info Section */
-  padding: 20px 0; /* Tạo không gian trên và dưới */
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 .info-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: relative; /* Để sử dụng pseudo-element */
+  position: relative;
 }
 
 .info-item:not(:last-child)::after {
   content: "";
   width: 1px;
-  height: 40px; /* Chiều cao của đường gạch */
-  background-color: #ccc; /* Màu của đường gạch */
+  height: 40px;
+  background-color: #ccc;
   position: absolute;
-  right: -20px; /* Căn gạch thẳng cách bên phải */
+  right: -20px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .info-number {
-  font-size: 36px; /* Tăng kích thước số */
+  font-size: 36px;
   color: #6366F1;
   font-weight: bold;
 }
 
 .info-text {
-  font-size: 16px; /* Tăng kích thước mô tả */
+  font-size: 16px; 
   color: #333;
-  text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+  text-transform: uppercase;
   line-height: 1.4;
 }
 
@@ -103,16 +103,16 @@
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  position: relative; /* Để sử dụng pseudo-element */
+  position: relative;
 }
 
 .contact-item:not(:last-child)::after {
   content: "";
   width: 1px;
-  height: 30px; /* Chiều cao của đường gạch */
-  background-color: #ccc; /* Màu của đường gạch */
+  height: 30px;
+  background-color: #ccc;
   position: absolute;
-  right: -10px; /* Căn gạch thẳng cách bên phải */
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -125,7 +125,7 @@
 /* Menu Section */
 .layout-topbar-menu {
   display: flex;
-  gap: 10px; /* Khoảng cách giữa các nút */
+  gap: 10px;
 }
 
 .layout-topbar-menu button {
@@ -148,17 +148,17 @@
 }
 
 .layout-topbar-logo {
-  margin-right: auto; /* Đẩy logo sang trái */
+  margin-right: auto;
 }
 
 .layout-topbar-search {
-  margin-left: auto; /* Đẩy search sang phải của logo */
+  margin-left: auto;
 }
 
 .layout-info-section {
-  margin: 0 auto; /* Đẩy info vào giữa */
+  margin: 0 auto;
 }
 
 .layout-topbar-menu {
-  margin-left: auto; /* Đẩy menu sang phải */
+  margin-left: auto;
 }
