@@ -209,7 +209,7 @@ export class AppMenuComponent implements OnInit {
                     },
                     {
                         label: 'Chính sách bảo mật',
-                        routerLink: ['/report'],
+                        routerLink: ['/policy-privacy'],
                     },
                 ],
             },

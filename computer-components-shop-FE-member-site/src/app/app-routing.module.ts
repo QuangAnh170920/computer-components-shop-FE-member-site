@@ -2,6 +2,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from "./layout/app.layout.component";
+import { PolicyPrivacyComponent } from './pages/policy/components/policy-privacy/policy-privacy.component';
 
 @NgModule({
     imports: [
@@ -11,6 +12,7 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
                     { path: 'store-intro', loadChildren: () => import('./pages/store-intro/store-intro.module').then(m => m.StoreIntroModule) },
                     { path: 'policy', loadChildren: () => import('./pages/policy/policy.module').then(m => m.PolicyModule) },
+                    { path: 'policy-privacy', component: PolicyPrivacyComponent },
                 ]
             },
             { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
