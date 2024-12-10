@@ -1,0 +1,50 @@
+<div class="product-page">
+  <div class="header">
+    <div class="header-content">
+      <h1>{{ categoryName }}</h1>
+      <p>Có {{ totalProducts }} sản phẩm trong {{ categoryName }}</p>
+    </div>
+    <div class="header-filter">
+      <p-dropdown
+        [options]="filterOptions"
+        [(ngModel)]="selectedFilter"
+        placeholder="Sắp xếp"
+        (onChange)="onFilterChange($event)"
+        class="filter-dropdown"
+      >
+      </p-dropdown>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <div class="image-container">
+        <img
+          [src]="product.imageUrl"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">{{ product.price | currency : "VND" }}</p>
+        <p-rating
+          [(ngModel)]="product.rating"
+          [readonly]="true"
+          [stars]="5"
+        ></p-rating>
+        <button class="add-to-cart-btn" (click)="addToCart(product)">
+          <i class="pi pi-shopping-cart"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <p-paginator
+    [rows]="rows"
+    [totalRecords]="totalProducts"
+    (onPageChange)="onPageChange($event)"
+    class="paginator"
+  >
+  </p-paginator>
+</div>

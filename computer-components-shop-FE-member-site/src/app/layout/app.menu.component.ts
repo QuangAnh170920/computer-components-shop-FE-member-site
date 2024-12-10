@@ -31,7 +31,7 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     {
                         label: 'Máy hút bụi thông minh',
-                        routerLink: [''],
+                        routerLink: ['/smart-vacuum-cleaner'],
                     },
                     {
                         label: 'Máy lọc không khí',
@@ -219,11 +219,11 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     {
                         label: 'Hướng dẫn đặt & mua hàng',
-                        routerLink: [''],
+                        routerLink: ['/instruct-order-purchase'],
                     },
                     {
                         label: 'Hướng dẫn tạo tài khoản',
-                        routerLink: ['/report'],
+                        routerLink: ['/instruct-account'],
                     },
                 ],
             },

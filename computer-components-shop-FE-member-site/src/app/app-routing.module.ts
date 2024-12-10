@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from "./layout/app.layout.component";
 import { PolicyPrivacyComponent } from './pages/policy/components/policy-privacy/policy-privacy.component';
+import { InstructOrderPurchaseComponent } from './pages/instruct/components/instruct-order-purchase/instruct-order-purchase.component';
+import { InstructAccountComponent } from './pages/instruct/components/instruct-account/instruct-account.component';
 
 @NgModule({
     imports: [
@@ -13,6 +15,9 @@ import { PolicyPrivacyComponent } from './pages/policy/components/policy-privacy
                     { path: 'store-intro', loadChildren: () => import('./pages/store-intro/store-intro.module').then(m => m.StoreIntroModule) },
                     { path: 'policy', loadChildren: () => import('./pages/policy/policy.module').then(m => m.PolicyModule) },
                     { path: 'policy-privacy', component: PolicyPrivacyComponent },
+                    { path: 'instruct-order-purchase', component: InstructOrderPurchaseComponent },
+                    { path: 'instruct-account', component: InstructAccountComponent },
+                    { path: 'smart-vacuum-cleaner', loadChildren: () => import('./pages/product/useful-household-appliances/smart-vacuum-cleaner/smart-vacuum-cleaner.module').then(m => m.SmartVacuumCleanerModule) },
                 ]
             },
             { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
