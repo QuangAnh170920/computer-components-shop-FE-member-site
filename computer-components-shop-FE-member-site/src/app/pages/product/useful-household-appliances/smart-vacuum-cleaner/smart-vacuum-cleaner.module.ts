@@ -5,6 +5,7 @@ import { SmartVacuumCleanerRoutingModule } from './smart-vacuum-cleaner-routing.
 import { DropdownModule } from 'primeng/dropdown';
 import { PaginatorModule } from 'primeng/paginator';
 import { RatingModule } from 'primeng/rating';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [SmartVacuumCleanerComponent],
@@ -13,7 +14,8 @@ import { RatingModule } from 'primeng/rating';
     SmartVacuumCleanerRoutingModule,
     DropdownModule,
     PaginatorModule,
-    RatingModule
+    RatingModule,
+    DialogModule,
 ],
 })
 export class SmartVacuumCleanerModule {}

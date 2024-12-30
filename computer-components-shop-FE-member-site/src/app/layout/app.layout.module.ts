@@ -20,6 +20,7 @@ import { AppLayoutComponent } from "./app.layout.component";
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { MenuModule } from 'primeng/menu';
 import { SpinnerComponent } from '../shared/components/spinner/spinner.component';
+import { DialogModule } from 'primeng/dialog';
 @NgModule({
     declarations: [
         AppMenuitemComponent,
@@ -44,7 +45,8 @@ import { SpinnerComponent } from '../shared/components/spinner/spinner.component
         RouterModule,
         AppConfigModule,
         ProgressSpinnerModule,
-        MenuModule
+        MenuModule,
+        DialogModule
     ],
     exports: [AppLayoutComponent]
 })

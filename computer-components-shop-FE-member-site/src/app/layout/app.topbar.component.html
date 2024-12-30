@@ -24,7 +24,7 @@
   </div>
 
   <!-- Info Section -->
-  <div class="layout-info-section" style="cursor: pointer;">
+  <div class="layout-info-section" style="cursor: pointer">
     <div class="info-item">
       <span class="info-number">07</span>
       <span class="info-text">NGÀY MIỄN PHÍ<br />đổi trả</span>
@@ -42,20 +42,157 @@
   <!-- Contact Section -->
   <div class="layout-contact-section">
     <div class="contact-item">
-      <span class="contact-title" style="cursor: pointer;">Trung tâm hỗ trợ</span>
+      <span class="contact-title" style="cursor: pointer"
+        >Trung tâm hỗ trợ</span
+      >
     </div>
     <div class="contact-item">
-      <span class="contact-title" style="cursor: pointer;">Liên hệ</span>
+      <span class="contact-title" style="cursor: pointer">Liên hệ</span>
     </div>
   </div>
 
   <!-- Menu -->
   <div class="layout-topbar-menu">
-    <button class="p-link layout-topbar-button">
+    <button class="p-link layout-topbar-button" (click)="toggleUserInfoDialog()">
       <i class="pi pi-user"></i>
     </button>
-    <button class="p-link layout-topbar-button">
+    <button class="p-link layout-topbar-button" (click)="toggleCartDrawer()">
       <i class="pi pi-shopping-cart"></i>
     </button>
   </div>
 </div>
+
+<p-dialog
+  [(visible)]="cartDrawerVisible"
+  [header]="'Giỏ hàng'"
+  [closable]="true"
+  [modal]="true"
+  [dismissableMask]="true"
+  [style]="{ width: '600px' }"
+  [contentStyle]="{ padding: '20px' }"
+>
+  <div *ngIf="cart.length > 0; else emptyCart">
+    <p class="cart-summary-text">Bạn đang có {{ cart.length }} sản phẩm trong giỏ hàng.</p>
+
+    <div class="cart-items">
+      <div class="cart-item" *ngFor="let item of cart; let i = index">
+        <div class="item-image">
+          <img [src]="item.imageUrl" alt="{{ item.name }}" />
+        </div>
+        <div class="cart-item-info">
+          <p class="item-name">{{ item.name }}</p>
+          <p class="item-price">{{ item.price | currency : 'VND' }}</p>
+          <div class="item-actions">
+            <p>Số lượng: {{ item.quantity }}</p>
+            <button
+              type="button"
+              class="p-button p-button-danger remove-button"
+              (click)="removeFromCart(i)"
+            >
+              <i class="pi pi-trash"></i> Xóa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <p class="total-price">Tổng tiền: {{ getTotalPrice() | currency : 'VND' }}</p>
+      <button
+        type="button"
+        class="p-button p-button-lg checkout-button"
+        (click)="placeOrder()"
+      >
+        Đặt hàng
+      </button>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <i class="pi pi-shopping-cart"></i>
+      <p>Hiện chưa có sản phẩm trong giỏ hàng.</p>
+    </div>
+  </ng-template>
+</p-dialog>
+
+<!-- User Info Dialog -->
+<p-dialog
+  [(visible)]="userInfoDialogVisible"
+  [header]="'Thông tin người dùng'"
+  [closable]="true"
+  [modal]="true"
+  [dismissableMask]="true"
+  [style]="{ width: '500px' }"
+  [contentStyle]="{ padding: '20px' }"
+>
+  <form (ngSubmit)="saveUserInfo()">
+    <div class="form-group">
+      <label for="username">Tên tài khoản</label>
+      <input
+        id="username"
+        type="text"
+        pInputText
+        [(ngModel)]="userInfo.username"
+        name="username"
+        disabled
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="fullName">Tên đầy đủ</label>
+      <input
+        id="fullName"
+        type="text"
+        pInputText
+        [(ngModel)]="userInfo.fullName"
+        name="fullName"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pInputText
+        [(ngModel)]="userInfo.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="address">Địa chỉ</label>
+      <textarea
+        id="address"
+        rows="3"
+        pInputTextarea
+        [(ngModel)]="userInfo.address"
+        name="address"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Số điện thoại</label>
+      <input
+        id="phone"
+        type="text"
+        pInputText
+        [(ngModel)]="userInfo.phone"
+        name="phone"
+        required
+      />
+    </div>
+
+    <div class="dialog-actions">
+      <button type="submit" class="p-button p-button-lg p-button-success">
+        Lưu thay đổi
+      </button>
+    </div>
+  </form>
+</p-dialog>
+
+

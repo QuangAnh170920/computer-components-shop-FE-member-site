@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   banners = [
-    { image: 'https://picsum.photos/1920/600?random=1' },
-    { image: 'https://picsum.photos/1920/600?random=2' },
-    { image: 'https://picsum.photos/1920/600?random=3' },
+    { image: 'assets/layout/images/banner1.jpg' },
+    { image: 'assets/layout/images/banner2.jpg' },
+    { image: 'assets/layout/images/banner3.jpg' },
   ];
   
   categories = [
-    { name: 'Bếp & Nấu ăn', image: 'https://picsum.photos/200/150?random=4' },
-    { name: 'Dụng cụ vệ sinh', image: 'https://picsum.photos/200/150?random=5' },
-    { name: 'Đồ gia dụng thông minh', image: 'https://picsum.photos/200/150?random=6' },
-    { name: 'Đồ điện', image: 'https://picsum.photos/200/150?random=7' },
-    { name: 'Trang trí nội thất', image: 'https://picsum.photos/200/150?random=8' },
+    { name: 'Bếp & Nấu ăn', image: 'assets/layout/images/banner-bep.jpg' },
+    { name: 'Dụng cụ vệ sinh', image: 'assets/layout/images/banner-dung-cu-ve-sinh.jpg' },
+    { name: 'Đồ gia dụng thông minh', image: 'assets/layout/images/banner-do-gia-dung.jpg' },
+    { name: 'Đồ điện', image: 'assets/layout/images/banner-do-dien.jpg' },
+    { name: 'Trang trí nội thất', image: 'assets/layout/images/banner-do-noi-that.jpg' },
   ];
   
   topProducts = [

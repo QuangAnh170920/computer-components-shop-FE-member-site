@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastService } from '../../shared/services/toast.service';
+import { CardModule } from 'primeng/card';
 
 
 
@@ -25,7 +26,7 @@ import { ToastService } from '../../shared/services/toast.service';
     InputTextModule,
     FormsModule,
     PasswordModule,
-
+    CardModule,
   ],
   providers:[
     ToastService

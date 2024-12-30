@@ -29,13 +29,13 @@
 }
 
 .layout-topbar-search input:focus {
-  border-color: #6366F1;
+  border-color: #6366f1;
 }
 
 .search-button {
   padding: 10px;
   border: none;
-  background-color: #6366F1;
+  background-color: #6366f1;
   color: #fff;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
@@ -43,7 +43,7 @@
 }
 
 .search-button:hover {
-  background-color: #6366F1;
+  background-color: #6366f1;
 }
 
 .search-button i {
@@ -79,12 +79,12 @@
 
 .info-number {
   font-size: 36px;
-  color: #6366F1;
+  color: #6366f1;
   font-weight: bold;
 }
 
 .info-text {
-  font-size: 16px; 
+  font-size: 16px;
   color: #333;
   text-transform: uppercase;
   line-height: 1.4;
@@ -138,7 +138,7 @@
 }
 
 .layout-topbar-menu button:hover {
-  color: #6366F1;
+  color: #6366f1;
 }
 
 .layout-topbar {
@@ -162,3 +162,194 @@
 .layout-topbar-menu {
   margin-left: auto;
 }
+
+:host ::ng-deep {
+  .p-dialog {
+    .p-dialog-header {
+      background-color: #2980b9;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .p-dialog-content {
+      background-color: #f9f9f9;
+
+      .cart-summary-text {
+        font-size: 14px;
+        color: #616161;
+        margin-bottom: 20px;
+      }
+
+      .cart-items {
+        max-height: 300px;
+        overflow-y: auto;
+
+        .cart-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          padding: 10px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          .item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 15px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .cart-item-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .item-name {
+              font-size: 16px;
+              font-weight: 600;
+              color: #333;
+              margin-bottom: 5px;
+            }
+
+            .item-price {
+              font-size: 14px;
+              font-weight: 500;
+              color: #2980b9;
+              margin-bottom: 10px;
+            }
+
+            .item-actions {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              p {
+                font-size: 13px;
+                color: #757575;
+              }
+
+              .remove-button {
+                background-color: #f44336;
+                color: #fff;
+
+                &:hover {
+                  background-color: #d32f2f;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cart-summary {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #e0e0e0;
+        text-align: right;
+
+        .total-price {
+          font-size: 18px;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 15px;
+        }
+
+        .checkout-button {
+          width: 100%;
+          background-color: #2980b9;
+          font-size: 16px;
+
+          &:hover {
+            background-color: #2980b9;
+          }
+        }
+      }
+
+      .empty-cart {
+        text-align: center;
+        padding: 50px 20px;
+        color: #bdbdbd;
+
+        i {
+          font-size: 60px;
+          color: #bdbdbd;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+          margin: 0;
+          color: #757575;
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .p-dialog {
+    .p-dialog-header {
+      background-color: #2196f3;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .p-dialog-content {
+      background-color: #f9f9f9;
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          display: block;
+          color: #333;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+
+        input:disabled {
+          background-color: #e9ecef;
+          cursor: not-allowed;
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+
+      .dialog-actions {
+        text-align: center;
+
+        .p-button {
+          width: 100%;
+          background-color: #2196f3;
+          font-size: 16px;
+
+          &:hover {
+            background-color: #2196f3;
+          }
+        }
+      }
+    }
+  }
+}
+
