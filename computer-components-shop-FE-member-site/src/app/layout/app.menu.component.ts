@@ -35,27 +35,7 @@ export class AppMenuComponent implements OnInit {
                     },
                     {
                         label: 'Máy lọc không khí',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy tạo ẩm',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Ổ cắm và công tắc thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Camera giám sát thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Đèn cảm ứng tự động',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy sưởi/máy làm mát di động',
-                        routerLink: ['/report'],
+                        routerLink: ['/air-purifier'],
                     },
                 ],
             },
@@ -64,39 +44,11 @@ export class AppMenuComponent implements OnInit {
                 expanded: false,
                 items: [
                     {
-                        label: 'Nồi chiên không dầu',
-                        routerLink: [''],
-                    },
-                    {
                         label: 'Nồi cơm điện thông minh',
                         routerLink: ['/report'],
                     },
                     {
                         label: 'Bếp từ/bếp hồng ngoại',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy xay sinh tố đa năng',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Ấm đun nước siêu tốc',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy rửa chén bát',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy pha cà phê',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Hộp đựng thực phẩm thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Tủ lạnh mini thông minh',
                         routerLink: ['/report'],
                     },
                 ],
@@ -113,30 +65,6 @@ export class AppMenuComponent implements OnInit {
                         label: 'Loa Bluetooth',
                         routerLink: ['/report'],
                     },
-                    {
-                        label: 'Máy chiếu mini',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Quạt trần/quạt đứng thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Bộ điều khiển nhà thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Rèm cửa tự động',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy massage',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Bộ sạc không dây',
-                        routerLink: ['/report'],
-                    },
                 ],
             },
             {
@@ -148,19 +76,7 @@ export class AppMenuComponent implements OnInit {
                         routerLink: [''],
                     },
                     {
-                        label: 'Hộp đựng giấy thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
                         label: 'Đồ dùng nhà vệ sinh (WC)',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Kệ treo khăn tắm thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Móc treo quần áo thông minh',
                         routerLink: ['/report'],
                     },
                 ],
@@ -174,23 +90,7 @@ export class AppMenuComponent implements OnInit {
                         routerLink: [''],
                     },
                     {
-                        label: 'Đồng hồ báo thức thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Quạt hơi nước',
-                        routerLink: ['/report'],
-                    },
-                    {
                         label: 'Tủ quần áo thông minh',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Chăn điện/đệm sưởi',
-                        routerLink: ['/report'],
-                    },
-                    {
-                        label: 'Máy lọc không khí mini',
                         routerLink: ['/report'],
                     },
                 ],

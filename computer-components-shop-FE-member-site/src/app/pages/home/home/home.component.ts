@@ -13,11 +13,11 @@ export class HomeComponent {
   ];
   
   categories = [
-    { name: 'Bếp & Nấu ăn', image: 'assets/layout/images/banner-bep.jpg' },
-    { name: 'Dụng cụ vệ sinh', image: 'assets/layout/images/banner-dung-cu-ve-sinh.jpg' },
-    { name: 'Đồ gia dụng thông minh', image: 'assets/layout/images/banner-do-gia-dung.jpg' },
-    { name: 'Đồ điện', image: 'assets/layout/images/banner-do-dien.jpg' },
-    { name: 'Trang trí nội thất', image: 'assets/layout/images/banner-do-noi-that.jpg' },
+    { name: 'Gia dụng tiện ích', image: 'assets/layout/images/banner-bep.jpg' },
+    { name: 'Gia dụng phòng bếp & phòng ăn', image: 'assets/layout/images/banner-dung-cu-ve-sinh.jpg' },
+    { name: 'Gia dụng phòng khách', image: 'assets/layout/images/banner-do-gia-dung.jpg' },
+    { name: 'Gia dụng phòng tắm', image: 'assets/layout/images/banner-do-dien.jpg' },
+    { name: 'Gia dụng phòng tủ', image: 'assets/layout/images/banner-do-noi-that.jpg' },
   ];
   
   topProducts = [
