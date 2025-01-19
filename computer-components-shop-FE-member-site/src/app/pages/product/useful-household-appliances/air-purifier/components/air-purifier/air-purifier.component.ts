@@ -1,17 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
-import { DialogService } from 'primeng/dynamicdialog';
-import { SmartVacuumCleanerFacade } from '../../facades/smart-vacuum-cleaner.facade';
+import { AirPurifierFacade } from '../../facades/air-purifier.facade';
 import { CartService } from '../../../../service/cart.service';
-import { ToastService } from '../../../../../../shared/services/toast.service';
 
 @Component({
-  selector: 'app-smart-vacuum-cleaner',
-  templateUrl: './smart-vacuum-cleaner.component.html',
-  styleUrl: './smart-vacuum-cleaner.component.scss',
+  selector: 'app-air-purifier',
+  templateUrl: './air-purifier.component.html',
+  styleUrls: ['./air-purifier.component.scss'],
 })
-export class SmartVacuumCleanerComponent implements OnInit {
-  categoryName = 'Máy hút bụi thông minh';
+export class AirPurifierComponent {
+  categoryName = 'Máy lọc không khí';
   totalProducts = 3;
   filterOptions = [
     { label: 'Giá giảm dần', value: 'desc' },
@@ -27,14 +25,12 @@ export class SmartVacuumCleanerComponent implements OnInit {
   productDetailDialogVisible: boolean = false;
   selectedProduct: any = null;
   selectedQuantity: number = 1;
-  searchPayload: number = 7;
-  
+  searchPayload: number = 8;
 
   constructor(
     private confirmationService: ConfirmationService,
-    private _smartVacuumCleanerFacade: SmartVacuumCleanerFacade,
-    private cartService:CartService,
-    private toastService: ToastService,
+    private _airPurifierFacade: AirPurifierFacade,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -42,8 +38,8 @@ export class SmartVacuumCleanerComponent implements OnInit {
   }
 
   loadData() {
-    this._smartVacuumCleanerFacade.search(this.searchPayload);
-    this._smartVacuumCleanerFacade.productsPaging$.subscribe((res) => {
+    this._airPurifierFacade.search(this.searchPayload);
+    this._airPurifierFacade.productsPaging$.subscribe((res) => {
       if (res) {
         this.filteredProducts = res;
       }
@@ -54,7 +50,7 @@ export class SmartVacuumCleanerComponent implements OnInit {
 
   addToCart(product: any) {
     if (this.selectedQuantity > product.quantityAvailable) {
-      this.toastService.showError('Vượt quá số lượng tồn kho.');
+      alert('Số lượng vượt quá tồn kho!');
       return;
     }
 
@@ -68,7 +64,7 @@ export class SmartVacuumCleanerComponent implements OnInit {
 
   showProductDetails(product: any) {
     this.selectedProduct = product;
-    this.selectedQuantity = 1; // Reset quantity
+    this.selectedQuantity = 1;
     this.productDetailDialogVisible = true;
   }
 }

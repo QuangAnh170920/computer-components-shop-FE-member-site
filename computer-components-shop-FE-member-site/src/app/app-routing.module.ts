@@ -18,6 +18,8 @@ import { InstructAccountComponent } from './pages/instruct/components/instruct-a
                     { path: 'instruct-order-purchase', component: InstructOrderPurchaseComponent },
                     { path: 'instruct-account', component: InstructAccountComponent },
                     { path: 'smart-vacuum-cleaner', loadChildren: () => import('./pages/product/useful-household-appliances/smart-vacuum-cleaner/smart-vacuum-cleaner.module').then(m => m.SmartVacuumCleanerModule) },
+                    { path: 'air-purifier', loadChildren: () => import('./pages/product/useful-household-appliances/air-purifier/air-purifier.module').then(m => m.AirPurifierModule) },
+                    { path: 'induction-cooker', loadChildren: () => import('./pages/product/kitchen-dining-room-household-appliances/induction-cooker/induction-cooker.module').then(m => m.InductionCookerModule) },
                 ]
             },
             { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },

@@ -1,0 +1,93 @@
+<div class="product-page">
+    <div class="header">
+      <div class="header-content">
+        <h1>{{ categoryName }}</h1>
+      </div>
+      <div class="header-filter">
+        <p-dropdown
+          [options]="filterOptions"
+          [(ngModel)]="selectedFilter"
+          placeholder="Sắp xếp"
+          (onChange)="onFilterChange()"
+          class="filter-dropdown"
+        >
+        </p-dropdown>
+      </div>
+    </div>
+  
+    <div class="product-list">
+      <div *ngFor="let product of filteredProducts" class="product-card" (click)="showProductDetails(product)">
+        <div class="image-container">
+          <img
+            [src]="product.imageUrl || 'assets/layout/images/noImg.png'"
+            class="product-image"
+          />
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-price">{{ product.price | currency : "VND" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Product Detail Dialog -->
+  <p-dialog
+    [(visible)]="productDetailDialogVisible"
+    [header]="selectedProduct?.name"
+    [style]="{ width: '650px' }"
+    [modal]="true"
+    [closable]="true"
+    [dismissableMask]="true"
+  >
+    <div class="product-detail">
+      <div class="image-container">
+        <img
+          [src]="selectedProduct?.imageUrl || 'assets/layout/images/noImg.png'"
+          class="product-image-large"
+        />
+      </div>
+      <div class="product-info">
+        <p><strong>Tên:</strong> {{ selectedProduct?.name }}</p>
+        <p><strong>Giá:</strong> {{ selectedProduct?.price | currency : 'VND' }}</p>
+        <p><strong>Số lượng tồn kho:</strong> {{ selectedProduct?.quantityAvailable || 'No Quantity Available'}}</p>
+        <div *ngIf="selectedProduct?.quantityAvailable">
+          <label for="quantity">Số lượng:</label>
+          <input
+            id="quantity"
+            type="number"
+            pInputText
+            [(ngModel)]="selectedQuantity"
+            [min]="1"
+            [max]="selectedProduct?.quantityAvailable"
+          />
+        </div>
+      </div>
+      <div class="product-features">
+        <h3>Thông tin chi tiết</h3>
+        <table class="features-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Thông tin chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let feature of selectedProduct?.productFeatures; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ feature.feature }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="dialog-actions">
+      <button
+        class="p-button p-button-lg"
+        (click)="addToCart(selectedProduct)"
+      >
+        Thêm vào giỏ hàng
+      </button>
+    </div>
+  </p-dialog>

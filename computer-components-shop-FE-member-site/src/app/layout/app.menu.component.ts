@@ -45,11 +45,11 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     {
                         label: 'Nồi cơm điện thông minh',
-                        routerLink: ['/report'],
+                        routerLink: ['/smart-cooker'],
                     },
                     {
                         label: 'Bếp từ/bếp hồng ngoại',
-                        routerLink: ['/report'],
+                        routerLink: ['/induction-cooker'],
                     },
                 ],
             },
